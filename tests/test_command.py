@@ -96,7 +96,7 @@ class FolderModeTests(CommandTestCase):
 
     def test_output_preserves_source_layout(self):
         src = self.make_tree()
-        dst = self.root / "out"
+        dst = (self.root / "out").resolve()
         with mock.patch.object(
             cli, "_convert_one", side_effect=lambda pdf, output, args: make_result(output)
         ) as convert:
