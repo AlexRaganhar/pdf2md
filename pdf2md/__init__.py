@@ -1,9 +1,12 @@
 """
-pdf2md - Scanned PDF to Markdown converter
+pdf2md - scanned PDF to Markdown converter.
 
-Uses PP-OCRv6_small for text recognition and Docling for Markdown conversion.
+The pipeline is deliberately small: render pages with pypdfium2, recognize
+text with RapidOCR (PP-OCRv6_small on ONNX Runtime), then group the text into
+paragraphs/headings and write Markdown plus page-numbered text.
 """
 
-from .converter import PdfToMarkdownConverter
+from .ocr import TextBlock
+from .pipeline import Result, convert_pdf
 
-__all__ = ["PdfToMarkdownConverter"]
+__all__ = ["convert_pdf", "Result", "TextBlock"]

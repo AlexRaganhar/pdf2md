@@ -1,6 +1,6 @@
-# Runtime dependencies (installed via pip).
-# PaddlePaddle itself is installed separately from the official index -- see README "Install".
-paddleocr
-docling>=2.0.0
-pypdfium2
-pypdf
+# Runtime dependencies. That's the whole list: no PyTorch, no PaddlePaddle.
+rapidocr>=3.9,<4
+onnxruntime>=1.17
+pypdfium2>=5
+pypdf>=5
+pillow>=9

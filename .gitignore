@@ -33,3 +33,5 @@ htmlcov/
 *.swp
 .DS_Store
 Thumbs.db
+# Batch output
+markdown_output/
